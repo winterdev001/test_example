@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<!--detail.html-->
+  <p>
+    <strong>Title:</strong>
+    {{book.title}}
+  </p>
+
+  <p>
+    <strong>Memo:</strong>
+    {{book.memo}}
+  </p>
+
+  <a href="{% url 'index' %}">Back</a> |
+  <a href="{% url 'edit' book.id %}">Edit</a>
+
+{% endblock %}

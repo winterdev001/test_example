@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<!--index.html-->
+{% if book_lists %}
+<h3>All Books</h3>
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Memo</th>
+    </tr>
+    {% endif %}
+    {% for book in book_lists %}
+    <tr>
+      <td>{{book.title}}</td>
+      <td>{{book.memo}}</td>
+      <td><a href="{% url 'detail' book.id %}">Detail</a></td>
+      <td><a href="{% url 'edit' book.id %}">Edit</a></td>
+      <td><a href="{% url 'delete' book.id %}">Delete</a></td>
+    </tr>
+    {% empty %}
+    <h4>You have no Books!</h4>
+    {% endfor %}
+  </table>
+
+  <br>
+    <a href="{% url 'create' %}">New Book</a>
+
+{% endblock %}
