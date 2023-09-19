@@ -1,6 +1,6 @@
 # Application for Functional Testing in Django
 
-This application allows users to register book information such as title and memo.
+This application allows users to register book information such as titles and memos.
 
 [![Image from Gyazo](https://i.gyazo.com/5b30d0b3287c0bb33ffe478559de5672.gif)](https://i.gyazo.com/5b30d0b3287c0bb33ffe478559de5672)
 
